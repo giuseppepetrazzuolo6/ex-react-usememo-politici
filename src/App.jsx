@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Card from "./components/Card"
 
 function App() {
   const urlApi = 'http://localhost:3333/politicians'
@@ -32,13 +33,8 @@ function App() {
 
         <div className="row">
           <div className="col">
-            {filteredData.map(el => (
-              <div className="card" key={el.id}>
-                <h2>{el.name}</h2>
-                <img src={el.image} alt={el.name} />
-                <h3>{el.position}</h3>
-                <p>{el.biography}</p>
-              </div>
+            {filteredData.map(politician => (
+              <Card key={politician.id} politician={politician} />
             ))}
           </div>
         </div>
