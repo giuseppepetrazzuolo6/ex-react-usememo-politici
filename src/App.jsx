@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import Card from "./components/Card"
 
 function App() {
@@ -16,10 +16,12 @@ function App() {
     loadPoliticians()
   }, [])
 
-  const filteredData = data.filter(el =>
-    el.name.toLowerCase().includes(search.toLowerCase()) ||
-    el.biography.toLowerCase().includes(search.toLowerCase())
-  )
+  const filteredData = useMemo(() => {
+    return data.filter(el =>
+      el.name.toLowerCase().includes(search.toLowerCase()) ||
+      el.biography.toLowerCase().includes(search.toLowerCase())
+    )
+  }, [search, data])
 
   return (
     <section>
