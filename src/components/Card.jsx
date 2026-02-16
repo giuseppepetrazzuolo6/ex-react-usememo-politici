@@ -1,7 +1,7 @@
 import React from "react"
 
 export default React.memo(function Card({ politician }) {
-    console.log("Render card:", politician.name)
+    console.log("Render card")
 
     return (
         <div className="card">

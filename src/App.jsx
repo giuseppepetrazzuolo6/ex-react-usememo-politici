@@ -32,7 +32,6 @@ function App() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-
         <div className="row">
           <div className="col">
             {filteredData.map(politician => (
