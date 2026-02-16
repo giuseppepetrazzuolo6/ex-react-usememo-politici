@@ -3,7 +3,9 @@
     margin: auto;
 }
 
-
+input {
+    margin-bottom: 10px;
+}
 
 /**** CARD *****/
 .col {
