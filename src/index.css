@@ -1,0 +1,22 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 30%;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+}
